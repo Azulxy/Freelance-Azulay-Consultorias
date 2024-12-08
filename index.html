@@ -3,61 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="Imagens/favicon.png" type="image/x-icon">
-  <title>Azulay Consultorias</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <title>Landing Page - Azulay Consultorias</title>
+  <style>
+    /* Ajuste para garantir que a altura seja 100% da tela */
+    .center-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto; /* Define as 3 linhas */
+      height: 100vh;
+    }
+
+    /* Estilo para a linha 2 (mensagens, perfil e botão) */
+    .row-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Estilo para a linha 3 (imagens motivacionais e redes sociais) */
+    .row-3 {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Ajuste para os ícones de redes sociais */
+    .responsive-icons {
+      display: flex;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .responsive-img {
+        width: 70px; /* Ajusta o tamanho das imagens em telas menores */
+      }
+
+      .responsive-msgs{
+        display: none;
+      }
+
+      .responsive-icons {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .center-container {
+        grid-template-rows: auto 1fr auto;
+      }
+    }
+  </style>
 </head>
-<body class="bg-blue-600 text-white font-sans">
-  <div class="max-w-4xl mx-auto p-6 text-center">
-    <div class="">
-      <img src="Imagens/perfil azu.png" alt="Foto do consultor" class="w-44 h-44 rounded-full mx-auto">
-      <img src="Imagens/logo.png" alt="Foto do consultor" class="w-40 h-30 -m-10 mx-auto">
+<body class="bg-gradient-to-b from-blue-500 to-blue-700 text-white">
+
+<!-- Container Principal com Grid -->
+<div class="center-container">
+
+  <!-- Perfil, Logo e Botão -->
+  <div class="flex flex-col items-center border"> 
+
+    <!-- Mensagens motivacionais (esquerda e direita) -->
+    <div class="hidden md:block flex w-full justify-between items-center mt-9 px-8 ">
+      <div class="text-lg font-semibold text-left mt-[10vh]">
+        <div class="bg-blue-800 rounded-full px-8 py-2 text-center shadow-md">
+          <p>O consultor mais top das galáxias que existe!</p>
+          <p>Atendendo por todo o Brasil!</p>
+        </div>
+      </div>
+      <div class="text-lg font-semibold text-right mt-[10vh]">
+        <div class="bg-blue-800 rounded-full px-8 py-2 text-center shadow-md">
+          <p>Aprenda a ganhar mais dinheiro com sua empresa!</p>
+          <p>Agende sua consultoria hoje!</p>
+        </div>
+      </div>
     </div>
 
-    <div class="mt-8 space-y-6 textos">
-      <button
-        onclick="console.log('Adicione aqui seu redirecionamento!')"
-        class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-md text-lg font-semibold shadow-lg">
+    <!-- Imagem do Consultor -->
+    <img src="Imagens/perfil azu.png" alt="Foto do Consultor" class="w-60 h-60 rounded-full shadow-lg">
+
+    <!-- Logo e Botão -->
+    <img src="Imagens/logo.png" alt="Logo Azulay" class="w-24 h-auto">
+    <button
+      class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-md text-lg font-semibold shadow-lg">
+      <p>
         Entre em contato!
-      </button>
-    </div>
-    
-    <!-- <div class="space-y-6">
-      <p class="text-lg consultoria">Agende sua consultoria hoje! <br> Atendendo por todo o Brasil!</p>
+      </p>
+    </button> 
+
+    <!-- Ícones das Redes Sociais -->
+    <div class="responsive-icons flex space-x-5 mb-4 pt-5">
+      <a href="#"><img src="Imagens/instagram.png" alt="Instagram" class="w-8"></a>
+      <a href="#"><img src="Imagens/youtube.png" alt="YouTube" class="w-8"></a>
+      <a href="#"><img src="Imagens/facebook.png" alt="Facebook" class="w-8"></a>
     </div>
 
-    <div class="space-y-6">
-      <p class="text-lg dinheiro">Aprenda a ganhar mais dinheiro com sua empresa! <br> O consultor mais top das galáxias que existe!</p>
-    </div> -->
+  </div>
 
-    <div class="absolute bottom-80 left-9 ml-[24vh] flex justify-center items-end px-10">
-        <div class="text-lg">
-            <p class="font-*">O MUNDO É DE QUEM FAZ! 🚀</p>
-        </div>
-    </div>
-    <div class="absolute bottom-80 right-[15vh] flex justify-center items-end ">
-        <div class="text-lg">
-            <p class="font-*">SIGA LÁ NAS REDES SOCIAIS!</p>
-        </div>
-    </div>
-    
-    <div class="absolute bottom-0 left-0 flex justify-center items-end px-20">
-        <div class="flex space-x-[95vh]">
-            <img src="Imagens/gritando.png" alt="Ilustração 1" class="w-64 ms-35">
-        </div>
+  <!-- Balões e Imagens motivacionais -->
+  <div class="row-3 fixed bottom-0 left-0 right-0 px-4 md:px-20 flex justify-between items-center mt-[23vh]">
+
+    <!-- Balão + Imagem Pensando -->
+    <div class="flex flex-col items-center border -space-y-[3rem] md:-space-y-[7rem]">
+      <div class="hidden md:block bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
+        <p class="text-sm font-medium">O MUNDO É DE QUEM FAZ! 🚀🚀</p>
+      </div>
+
+      <!-- Texto para telas menores -->
+      <div class="md:hidden bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
+        <p class="text-xs font-small">O MUNDO É DE QUEM FAZ! 🚀🚀</p>
+      </div>
+
+      <img src="Imagens/pensando.png" alt="Consultor Pensando" class="w-40 md:w-60 responsive-img">
     </div>
 
-    <div class="absolute bottom-0 right-0 flex justify-center items-end px-20">
-        <div class="flex mr-[30vh]">
-            <img src="Imagens/pensando.png" alt="Ilustração 2" class="w-64 me-35">
-        </div>
-    </div>
+    <!-- Balão + Imagem Gritando -->
+    <div class="flex flex-col items-center border -space-y-[3rem] md:-space-y-[7rem]">
+      <div class="hidden md:block bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
+        <p class="text-m font-medium">SIGA LÁ NAS REDES SOCIAIS!</p>
+      </div>
 
-    <div class="mt-[70px] flex justify-center space-x-4">
-      <a href="#" target="_blank"><img src="Imagens/instagram.png" alt="Instagram" class="w-8 rounded-[9px]"></a>
-      <a href="#" target="_blank"><img src="Imagens/youtube.png" alt="YouTube" class="w-8 rounded-[9px]"></a>
-      <a href="#" target="_blank"><img src="Imagens/facebook.png" alt="Facebook" class="w-8 rounded-[9px]"></a>
+      <!-- Texto para telas menores -->
+      <div class="md:hidden bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
+        <p class="text-xs font-medium">SIGA LÁ NAS REDES SOCIAIS!</p>
+      </div>
+
+      <img src="Imagens/gritando.png" alt="Consultor Gritando" class="w-40 md:w-60 responsive-img">
     </div>
   </div>
+
+</div>
+
 </body>
 </html>
