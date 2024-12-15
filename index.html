@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function siteRedirect() {
+      window.open( "https://www.google.com", "_blank");
+    }
+  </script>
   <title>Landing Page - Azulay Consultorias</title>
   <style>
     /* Ajuste para garantir que a altura seja 100% da tela */
@@ -40,7 +45,7 @@
     @media (max-width: 768px) {
       .responsive-img {
         width: 70px; /* Ajusta o tamanho das imagens em telas menores */
-      }
+        }
 
       .responsive-msgs{
         display: none;
@@ -54,8 +59,24 @@
       }
 
       .center-container {
-        grid-template-rows: auto 1fr auto;
+          grid-template-rows: auto 1fr auto;
       }
+
+    .social-button {
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    .social-button:hover {
+      transform: translateY(-5px); /* Levanta o botão ao passar o mouse */
+    }
+
+    .social-button img {
+      width: 30px; /* Ajuste o tamanho do ícone se necessário */
+      height: 30px;
+    }
+
+
     }
   </style>
 </head>
@@ -91,7 +112,7 @@
     <img src="./imagens/logo.png" alt="Logo Azulay" class="hidden md:block w-24 h-auto">
     <img src="./imagens/logo.png" alt="Logo Azulay" class="block md:hidden w-36 -mb-4 h-auto">
     <button
-      class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-md text-lg font-semibold shadow-lg">
+      class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-md text-lg font-semibold shadow-lg" onclick="siteRedirect()">
       <p>
         Entre em contato!
       </p>
@@ -99,10 +120,17 @@
 
     <!-- Ícones das Redes Sociais -->
     <div class="responsive-icons flex space-x-5 mb-4 pt-5">
-      <a href="#"><img src="./imagens/instagram.png" alt="Instagram" class="w-8"></a>
-      <a href="#"><img src="./imagens/youtube.png" alt="YouTube" class="w-8"></a>
-      <a href="#"><img src="./imagens/facebook.png" alt="Facebook" class="w-8"></a>
+      <a href="https://www.instagram.com/azulayempreendedorismo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"  class="social-button">
+        <img src="./imagens/instagram.png" alt="Instagram" class="w-8">
+      </a>
+      <a href="https://www.youtube.com/@PapodeEmpreendedorismo" target="_blank" class="social-button">
+        <img src="./imagens/youtube.png" alt="YouTube" class="w-8">
+      </a>
+      <a href="https://facebook.com/joao.azulay" target="_blank" class="social-button">
+        <img src="./imagens/facebook.png" alt="Facebook" class="w-8">
+      </a>
     </div>
+
 
   </div>
 
