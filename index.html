@@ -65,10 +65,10 @@
 <div class="center-container">
 
   <!-- Perfil, Logo e Botão -->
-  <div class="flex flex-col items-center border"> 
+  <div class="flex flex-col items-center"> 
 
     <!-- Mensagens motivacionais (esquerda e direita) -->
-    <div class="hidden md:block flex w-full justify-between items-center mt-9 px-8 ">
+    <div class="hidden md:flex w-full justify-between items-center mt-9 px-8 ">
       <div class="text-lg font-semibold text-left mt-[10vh]">
         <div class="bg-blue-800 rounded-full px-8 py-2 text-center shadow-md">
           <p>O consultor mais top das galáxias que existe!</p>
@@ -84,10 +84,12 @@
     </div>
 
     <!-- Imagem do Consultor -->
-    <img src="Imagens/perfil azu.png" alt="Foto do Consultor" class="w-60 h-60 rounded-full shadow-lg">
+    <img src="Imagens/perfil azu.png" alt="Foto do Consultor" class="hidden md:block w-60 h-60 rounded-full shadow-lg">
+    <img src="Imagens/perfil azu.png" alt="Foto do Consultor" class="block md:hidden w-60 h-60  mt-3 rounded-full shadow-lg">
 
     <!-- Logo e Botão -->
-    <img src="Imagens/logo.png" alt="Logo Azulay" class="w-24 h-auto">
+    <img src="Imagens/logo.png" alt="Logo Azulay" class="hidden md:block w-24 h-auto">
+    <img src="Imagens/logo.png" alt="Logo Azulay" class="block md:hidden w-36 -mb-4 h-auto">
     <button
       class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-md text-lg font-semibold shadow-lg">
       <p>
@@ -108,28 +110,18 @@
   <div class="row-3 fixed bottom-0 left-0 right-0 px-4 md:px-20 flex justify-between items-center mt-[23vh]">
 
     <!-- Balão + Imagem Pensando -->
-    <div class="flex flex-col items-center border -space-y-[3rem] md:-space-y-[7rem]">
-      <div class="hidden md:block bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
+    <div class="flex flex-col items-center -space-y-[3rem] md:-space-y-[7rem]">
+      <div class="hidden md:flex bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
         <p class="text-sm font-medium">O MUNDO É DE QUEM FAZ! 🚀🚀</p>
-      </div>
-
-      <!-- Texto para telas menores -->
-      <div class="md:hidden bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
-        <p class="text-xs font-small">O MUNDO É DE QUEM FAZ! 🚀🚀</p>
       </div>
 
       <img src="Imagens/pensando.png" alt="Consultor Pensando" class="w-40 md:w-60 responsive-img">
     </div>
 
     <!-- Balão + Imagem Gritando -->
-    <div class="flex flex-col items-center border -space-y-[3rem] md:-space-y-[7rem]">
-      <div class="hidden md:block bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
+    <div class="flex flex-col items-center -space-y-[3rem] md:-space-y-[7rem]">
+      <div class="hidden md:flex bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
         <p class="text-m font-medium">SIGA LÁ NAS REDES SOCIAIS!</p>
-      </div>
-
-      <!-- Texto para telas menores -->
-      <div class="md:hidden bg-blue-800 rounded-full px-4 py-2 text-center shadow-md">
-        <p class="text-xs font-medium">SIGA LÁ NAS REDES SOCIAIS!</p>
       </div>
 
       <img src="Imagens/gritando.png" alt="Consultor Gritando" class="w-40 md:w-60 responsive-img">
